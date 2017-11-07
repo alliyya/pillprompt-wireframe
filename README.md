@@ -2,13 +2,13 @@
 
 ## Pages to do
 
-### Login Pages
+### Login Pages --> A
 ~~Login Page~~
 - Reset Password Page
 - Admin Homepage
 - Staff Homepage
 
-### CLC Group Management
+### CLC Group Management --> A
 - CLC Group Management
 - List of Groups
 	- Edit list of Groups
@@ -17,20 +17,20 @@
 - View all Participants
 - Create CLC Participants Account
 
-### CLC Staff Management
+### CLC Staff Management --> A
 - Staff Management
 - Create CLC Staff Account
 - View List of Staff Members
 
-### Pages Not Found
+### Pages Not Found --> Daniella
 - 501 Not implemented Page
 - 404 Page
 
-### Medication
+### Medication --> Tyler
 - Single Medication Page
 - Participant's Medication Schedule
 
-### Profile
+### Profile --> Darko
 - Profile
 - Edit Profile
 
