@@ -5,43 +5,58 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Title Page</title>
-
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="main.css">
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
 	</head>
 	<body>
-		<div class="text-center">
-		</div>
-		<!-- <h1 class="text-center">PillPrompt</h1> -->
-		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
-		<!-- Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
-    	  <div class="modal-dialog">
-				<div class="loginmodal-container">
-			<img src="pillprompt.svg" alt="PillPrompt">
-					<h1>Log into Your Account</h1><br>
-				  <form>
-					<input type="text" name="email" placeholder="example@host.com">
-					<input type="password" name="pass" placeholder="Password">
-					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-				  </form>
-					
-				  <div class="login-help">
+		
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				<img src="pillprompt.svg" alt="PillPrompt">
+				<h1>Log into Your Account</h1><br>
+				<form name="login">
+					<input id="email" type="text" name="email" placeholder="example@host.com">
+					<input id="pass" type="password" name="pass" placeholder="password">
+					<input type="submit" name="login" onclick="validate()" class="login loginmodal-submit" value="Login">
+				</form>
+				<div class="login-help">
 					<a href="#">Forgot Password</a>
-				  </div>
 				</div>
 			</div>
+		</div>
+		<script language="javascript">
+		
+		function validate(){
+			var username = document.getElementById("email").value;
+			var password = document.getElementById("pass").value;
+			if ( username == "admin" && password == "pass"){
+				// alert ("Login successfully");
+				window.location.href = "success.html"; // Redirecting to other page.
+				return true;
+			}
+		}
 
-
+		function check(form)/*function to check userid & password*/
+		{
+		 /*the following code checkes whether the entered userid and password are matching*/
+		 if(form.email.value == "admin" && form.pswrd.value == "lol")
+		  {
+		    window.Open('pillprompt.svg')/*opens the target page while Id & password matches*/
+		  }
+		 else
+		 {
+		   alert("Error Password or Username")/*displays error message*/
+		  }
+		}
+		</script>
 	</body>
 </html>
