@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLC Participant Group Summary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-left" href="pillprompt.html"><img class="logo" src="assets/images/pillprompt.svg" alt="PillPrompt Logo"></a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="pillprompt.html">Home</a></li>
+              <li class="dropdown">
+                <a href="groupsummary.html" class="dropdown-toggle" data-toggle="dropdown">CLC Participant Group Management <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="groupsummary.html">CLC Participant Group Summary</a></li>
+                  <li><a href="#">Create CLC Participant Group</a></li>
+                  <li><a href="#">Edit CLC Participant Groups</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">View All CLC Participants</a></li>
+                  <li><a href="#">Create CLC Participant</a></li>
+                  <li><a href="#">Edit CLC Participants</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="stafflist.html" class="dropdown-toggle" data-toggle="dropdown">CLC Participant Group Management <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="stafflist.html">View List of Staff Members</a></li>
+                  <li><a href="#">Create CLC Staff Account</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown active">
+                <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Oliver Queen<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="profile.html">View Profile</a></li>
+                  <li><a href="profile-edit.html">Edit Profile</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <div class="modal-dialog">
+          <table class="table table-hover table-responsive" id="summary">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0)">
+                  Group ID
+                </th>
+                <th onclick="sortTable(1)">
+                  # CLC Participants
+                </th>
+                <th onclick="sortTable(2)">
+                  Assigned CLC Staff Member
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Unassigned
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  None
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  001
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  Iris West 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  002
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  Joe West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  003
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  <a href="profile-harrison-wells.html">Harrison Wells</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <script>
+          function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("summary");
+            switching = true;
+            // Set the sorting direction to ascending:
+            dir = "asc"; 
+            /* Make a loop that will continue until
+            no switching has been done: */
+            while (switching) {
+              // Start by saying: no switching is done:
+              switching = false;
+              rows = table.getElementsByTagName("TR");
+              /* Loop through all table rows (except the
+              first, which contains table headers): */
+              for (i = 1; i < (rows.length - 1); i++) {
+                // Start by saying there should be no switching:
+                shouldSwitch = false;
+                /* Get the two elements you want to compare,
+                one from current row and one from the next: */
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /* Check if the two rows should switch place,
+                based on the direction, asc or desc: */
+                if (dir == "asc") {
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                } else if (dir == "desc") {
+                  if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    // If so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                }
+              }
+              if (shouldSwitch) {
+                /* If a switch has been marked, make the switch
+                and mark that a switch has been done: */
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                // Each time a switch is done, increase this count by 1:
+                switchcount ++; 
+              } else {
+                /* If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again. */
+                if (switchcount == 0 && dir == "asc") {
+                  dir = "desc";
+                  switching = true;
+                }
+              }
+            }
+          }
+          </script>
+        </div>
+      </body>
+    </html>
