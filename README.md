@@ -2,13 +2,12 @@
 
 ## Pages to do
 
-### Login Pages --> A
+### Login Pages --> Alliyya
 ~~Login Page~~
-- Reset Password Page
-- Admin Homepage
-- Staff Homepage
+~~ Reset Password Page~~
+~~ Admin Homepage ~~
 
-### CLC Group Management --> A
+### CLC Group Management --> Alliyya
 - CLC Group Management
 - List of Groups
 	- Edit list of Groups
@@ -17,7 +16,7 @@
 - View all Participants
 - Create CLC Participants Account
 
-### CLC Staff Management --> A
+### CLC Staff Management --> Alliyya
 - Staff Management
 - Create CLC Staff Account
 - View List of Staff Members
