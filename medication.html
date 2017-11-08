@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+
+	<!-- Personal CSS for the page -->
+	<link rel="stylesheet" href="assets/css/medication.css">
+
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container-fluid">
+			<div class="navbar-header">
+				<img class="navbar-brand" src="pillprompt.svg" alt="PillPrompt">
+				<!-- <a class="navbar-brand" href="#">PillPrompt</a> -->
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">CLC Participant Group Management</a></li>
+					<li><a href="#">CLC Staff Management</a></li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Displays the profile picture, user name, and add medication button -->
+	<div id="profile-section">
+		<div class="row">
+			<div class="col-lg">
+				<div class="col-sm-4">
+					<img align="left" class="profile-img thumbnail" src="assets/images/blank-profile-pic.png" alt="Sample Profile Image"/>
+					<div class="bottom-align-text col-sm-6">
+						<h1>User Name</h1>
+					</div>
+				</div>
+				<div class="col-lg pull-right col-align">
+					<button type="button" class="btn-override btn-lrg btn-blue" data-toggle="modal" data-target="#med-modal">
+						<span class="glyphicon glyphicon-plus"></span> Add Medication
+					</button>
+					<!-- Modal for creating medication -->
+					<div id="med-modal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Add Medication</h4>
+								</div>
+								<div class="modal-body">
+									<p>This is a paragraph</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+
+</html>
