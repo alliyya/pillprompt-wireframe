@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>List of Staff Members</title>
+    <title>List of all CLC Participants</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -49,7 +49,7 @@
               <li class="dropdown active">
                 <a href="profile.html" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Oliver Queen<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="Profile.html">View Profile</a></li>
+                  <li><a href="profile.html">View Profile</a></li>
                   <li><a href="profile-edit.html">Edit Profile</a></li>
                 </ul>
               </li>
@@ -59,7 +59,7 @@
       </nav>
       <div>
         <div class="modal-dialog">
-          <table class="table table-hover table-responsive" id="list">
+          <table class="table table-hover table-responsive" id="summary">
             <thead>
               <tr>
                 <th onclick="sortTable(0)">
@@ -68,31 +68,158 @@
                 <th onclick="sortTable(1)">
                   Last Name
                 </th>
+                <th onclick="sortTable(2)">
+                  Group ID
+                </th>
+                <th onclick="sortTable(3)">
+                  Assigned CLC Staff Member
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  Iris
+                  Bruce
                 </td>
                 <td>
-                  West
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Joe
+                  Wayne
                 </td>
                 <td>
-                  West
+                  Unassigned
+                </td>
+                <td>
+                  None
                 </td>
               </tr>
               <tr>
                 <td>
-                  Harrison
+                  Alfred
                 </td>
                 <td>
-                  Wells
+                  Wayne
+                </td>
+                <td>
+                  Unassigned
+                </td>
+                <td>
+                  None
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                  Hank
+                </td>
+                <td>
+                  Mcoy
+                </td>
+                <td>
+                  001
+                </td>
+                <td>
+                  Iris West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Johnny
+                </td>
+                <td>
+                  Storm
+                </td>
+                <td>
+                  001
+                </td>
+                <td>
+                  Iris West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Lex
+                </td>
+                <td>
+                  Luthor
+                </td>
+                <td>
+                  001
+                </td>
+                <td>
+                  Iris West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Mary
+                </td>
+                <td>
+                  Jane
+                </td>
+                <td>
+                  002
+                </td>
+                <td>
+                  Joe West
+                </td>
+              </tr>
+              <tr>
+                  
+                <td>
+                <a href="profile-barryallen.html">
+                  Barry
+                </a>
+                </td>
+                <td>
+                <a href="profile-barryallen.html">
+                  Allen
+                </a>
+                </td>
+                <td>
+                  002
+                </td>
+                <td>
+                  <a href="profile-harrison-wells.html">Harrison Wells</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Dinah
+                </td>
+                <td>
+                  Lance
+                </td>
+                <td>
+                  002
+                </td>
+                <td>
+                  Joe West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Lynda
+                </td>
+                <td>
+                  Carter
+                </td>
+                <td>
+                  003
+                </td>
+                <td>
+                  Joe West
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Clark
+                </td>
+                <td>
+                  Kent
+                </td>
+                <td>
+                  003
+                </td>
+                <td>
+                  <a href="profile-harrison-wells.html">Harrison Wells</a>
                 </td>
               </tr>
             </tbody>
@@ -101,7 +228,7 @@
           <script>
           function sortTable(n) {
             var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-            table = document.getElementById("list");
+            table = document.getElementById("summary");
             switching = true;
             // Set the sorting direction to ascending:
             dir = "asc"; 
