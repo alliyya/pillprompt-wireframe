@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<!-- NEED THIS TO USE MODALS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -52,64 +55,220 @@
 					</div>
 				</div>
 				<div class="col-lg pull-right col-align">
-					<button type="button" class="btn-override btn-lrg btn-blue" data-toggle="modal" data-target="#med-modal">
+					<button type="button" class="btn btn-lg btn-blue" data-toggle="modal" data-target="#med-modal">
 						<span class="glyphicon glyphicon-plus"></span> Add Medication
 					</button>
-					<!-- Modal for creating medication -->
-					<div id="med-modal" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title">Add Medication</h4>
-								</div>
-								<div class="modal-body">
-									<p>This is a paragraph</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Button to Open the Modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Open modal
-  </button>
+	<div class="panel-group panel-pad">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<button type="button" class="close" >&times;</button>
+				<h4 class="panel-title">Adderall</h4>
+			</div>
+			<div class="panel-info-pad">
+				<h4><b>Time(s):</b></h4> <br />
+				<div class="form-group">
+					<div class="form-group">
+						<input type="checkbox" value="" width="10" checked disabled>
+						<br />
+						<label for="sun">Sun</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="mon">Mon</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="tue">Tue</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="wed">Wed</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="thu">Thu</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="fri">Fri</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" value="" width="50" checked disabled>
+						<br />
+						<label for="sat">Sat</label>
+					</div>
+				</div> <br />
+				<div class="form-group">
+					<select class="form-control" id="sel1" disabled>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option selected>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" id="sel2" disabled>
+						<option selected>00</option>
+						<option>15</option>
+						<option>30</option>
+						<option>45</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" id="sel3" disabled>
+						<option selected>am</option>
+						<option>pm</option>
+					</select>
+				</div> <br />
+				<div class="form-group">
+					<select class="form-control" id="sel1" disabled>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option selected>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" id="sel2" disabled>
+						<option selected>00</option>
+						<option>15</option>
+						<option>30</option>
+						<option>45</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" id="sel3" disabled>
+						<option>am</option>
+						<option selected>pm</option>
+					</select>
+				</div>
+				<p><h4><b>Description:</b></h4> Used to treat the participant's ADD</p>
+				<p><h4><b>How to Administer:</b></h4> Ingest pill</p>
+			</div>
+		</div>
+	</div>
 
-  <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
+	<!-- Modal for creating medication -->
+	<div id="med-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Add Medication</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control" id="medication-name" placeholder="Medication Name" name="medication">
+					<br />
+					<div class="form-group">
+						<div class="form-group">
+							<input type="checkbox" value="" width="10" id="sun">
+							<br />
+							<label for="sun">Sun</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="mon">
+							<br />
+							<label for="mon">Mon</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="tue">
+							<br />
+							<label for="tue">Tue</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="wed">
+							<br />
+							<label for="wed">Wed</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="thu">
+							<br />
+							<label for="thu">Thu</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="fri">
+							<br />
+							<label for="fri">Fri</label>
+						</div>
+						<div class="form-group">
+							<input type="checkbox" value="" width="50" id="sat">
+							<br />
+							<label for="sat">Sat</label>
+						</div>
+					</div>
+					<br />
+					<div class="form-group">
+						<select class="form-control" id="sel1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="form-control" id="sel2">
+							<option>00</option>
+							<option>15</option>
+							<option>30</option>
+							<option>45</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="form-control" id="sel3">
+							<option>am</option>
+							<option>pm</option>
+						</select>
+					</div>
+					<br />
+					<button type="button" class="btn btn-md btn-blue">
+						<span class="glyphicon glyphicon-plus"></span> Add Time
+					</button>
+					<br />
+					<br />
+					<input type="text" class="form-control" id="description" placeholder="Description" name="description"> <br />
+					<input type="text" class="form-control" id="how-to-administer" placeholder="How to Administer" name="how-to-administer">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-blue" data-dismiss="modal">Done</button>
+					<button type="button" class="btn btn-blue" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
   </body>
 
