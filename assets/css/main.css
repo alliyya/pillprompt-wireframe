@@ -2,7 +2,7 @@
 
 body {
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /****** LOGIN MODAL ******/
@@ -95,7 +95,7 @@ a.login.loginmodal-submit {
 }
 
 .login-help{
-  font-size: 1em;
+  font-size: 0.75em;
   display: flex;
   margin-top: 0;
 }
@@ -166,6 +166,8 @@ img.logo{
 .navbar-inverse {
   background-color: #46494C;
   border-radius: 0px;
+  /*min-height: 4em;*/
+  font-size: 1.5em;
 }
 
 span.date {
@@ -174,4 +176,17 @@ span.date {
 .form-control {
   font-size: 1.5em;
   height: 2em;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+  color:white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #9d9d9d;
+}
+
+.loginmodal-container a{
+  margin:0;
 }
